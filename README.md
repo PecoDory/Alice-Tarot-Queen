@@ -3,9 +3,17 @@
 
 
 # Alice-Tarot-Queen
+
 An application for all of your prognosticative needs, known or otherwise
 
 
 
 ## Purpose
+
 This is a React-built application that allows the user to interact with their past, present, and future, by printing any query, thought, or concern to the page, and on submission will receive answers through the vessel of Tarot, and Math.random. Those questions will be preserved in an anonymous, ethereal realm that can be accessesed if the user is so inclined. It uses Airtable for the cards, descriptions, and images.
+
+## Wireframes
+
+![alt text](https://i.imgur.com/hI5wTaK.jpeg)
+![alt text](https://i.imgur.com/bdcAFyz.jpeg)
+![alt text](https://i.imgur.com/9ykv229.jpeg)
