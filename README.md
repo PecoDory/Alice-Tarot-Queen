@@ -95,7 +95,7 @@ Below are examples of how this website will materialize on desktop, tablet, and 
 |      | Studying New Concepts | General(Axios Calls, ect.) | Writing Code | Styling          | Total Hours Day | Total Hours Days |
 | ---- | --------------------- | -------------------------- | ------------ | ---------------  | --------------- | ---------------- |
 | March 26  | 4 hours          | 2 hours                    | 3 hours      | 0.5 hour(initial)| 9.5             | 9.5              |
-| March 27  | 1 hours          | 1 hour                     | 5 hours      | 1 hour           | 8               | 17.5             |
+| March 27  | 1 hour           | 1 hour                     | 5 hours      | 1 hour           | 8               | 17.5             |
 | March 28  | 1 hours(review)  | 1 hour                     | 6 hours      | 1.5 hours        | 8.5             | 26               |
 | March 29  | 0                | 1 hour                     | 6 hours      | 1.5 hours        | 8.5             | 34.5             |
 | March 30  | 0                | 1 hour                     | 4 hours      | 4 hours          | 9               | 43.5             |
