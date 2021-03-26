@@ -14,6 +14,52 @@ This is a React-built application that allows the user to interact with their pa
 
 ## Wireframes
 
+Below are examples of how this website will materialize on desktop, tablet, and a phone
+
 ![alt text](https://i.imgur.com/hI5wTaK.jpeg)
 ![alt text](https://i.imgur.com/bdcAFyz.jpeg)
 ![alt text](https://i.imgur.com/9ykv229.jpeg)
+
+## Component Hierarchy
+
+![alt text](https://i.imgur.com/IcQao8U.jpeg)
+
+## Airtable data snippet
+
+```
+{
+    "records": [
+        {
+            "id": "reckbMpQaxOk4Byoy",
+            "fields": {
+                "name": "the fool",
+                "description": "newness, adventure, beginnings",
+                "num": 0,
+                "arcana": "major"
+            },
+            "createdTime": "2021-03-26T04:24:34.000Z"
+        },
+        {
+            "id": "receslQiwyH2AxUBr",
+            "fields": {
+                "name": "the magician",
+                "description": "power, charisma, manifestation, self-determination, masculine magic(k)",
+                "num": 1,
+                "arcana": "major"
+            },
+            "createdTime": "2021-03-26T04:24:34.000Z"
+        },
+        {
+            "id": "rec2ofuTqTyHHykVV",
+            "fields": {
+                "name": "the high priestess",
+                "description": "intuition, liminality, divination, psychic exploration, feminine magic(k)",
+                "num": 2,
+                "arcana": "major"
+            },
+            "createdTime": "2021-03-26T04:24:34.000Z"
+        }
+    ],
+    "offset": "rec2ofuTqTyHHykVV"
+}
+```
