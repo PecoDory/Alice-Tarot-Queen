@@ -74,7 +74,7 @@ Below are examples of how this website will materialize on desktop, tablet, and 
 ### Post MVP
 
 - Have a place where users can submit their own tarot and psychic phenomena-related images.
-- Create a way for interpretaions of cards to be more in depth than only descriptions i.e. "if this card, and this card are drawn together, that means this." 
+- Create a way for interpretations of cards to be more in depth than only descriptions i.e. "if this card, and this card are drawn together, that means this." 
 
 ## Project Schedule
 
