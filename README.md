@@ -1,12 +1,8 @@
 ![alt text](https://i.pinimg.com/originals/d2/e9/5f/d2e95f54788f932b61296561d8ef6343.jpg)
 
-
-
 # Alice-Tarot-Queen
 
 An application for all of your prognosticative needs, known or otherwise
-
-
 
 ## Purpose
 
@@ -63,9 +59,11 @@ Below are examples of how this website will materialize on desktop, tablet, and 
     "offset": "rec2ofuTqTyHHykVV"
 }
 ```
+
 ## MVP and "Beyond"
 
 ### MVP
+
 - A home page with a form to submit your questions.
 - A card render that will happen on submit, allowing the user to "flip" face-down cards and get their image and description.
 - Post page that will hold every user's anonymous questions for viewing.
@@ -74,36 +72,35 @@ Below are examples of how this website will materialize on desktop, tablet, and 
 ### Post MVP
 
 - Have a place where users can submit their own tarot and psychic phenomena-related images.
-- Create a way for interpretations of cards to be more in depth than only descriptions i.e. "if this card, and this card are drawn together, that means this." 
+- Create a way for interpretations of cards to be more in depth than only descriptions i.e. "if this card, and this card are drawn together, that means this."
 
 ## Project Schedule
 
-| Day      | Deliverable                                
-| -------- | ------------------------------------------ 
-| March 26 |  Pitch,  finish Airtable with image links/ Boilerplate React begin
-| March 27 |  Continue component creation, set up API call
-| March 28 |  Card logic, digging into code              
-| March 29 |  Continue coding/ preliminary CSS                              
-| March 30 |  Coding/ more in depth CSS styling
-| March 31 |  Hit MVP                               
-| April 1  | Clean up code, Clean up CSS
-| April 2  | Presentation Day
-
+| Day      | Deliverable                                                      |
+| -------- | ---------------------------------------------------------------- |
+| March 26 | Pitch, finish Airtable with image links/ Boilerplate React begin |
+| March 27 | Continue component creation, set up API call                     |
+| March 28 | Card logic, digging into code                                    |
+| March 29 | Continue coding/ preliminary CSS                                 |
+| March 30 | Coding/ more in depth CSS styling                                |
+| March 31 | Hit MVP                                                          |
+| April 1  | Clean up code, Clean up CSS                                      |
+| April 2  | Presentation Day                                                 |
 
 ## Project Timetable
 
-|      | Studying New Concepts | General(Axios Calls, ect.) | Writing Code | Styling          | Total Hours Day | Total Hours Days |
-| ---- | --------------------- | -------------------------- | ------------ | ---------------  | --------------- | ---------------- |
-| March 26  | 4 hours          | 2 hours                    | 3 hours      | 0.5 hour(initial)| 9.5             | 9.5              |
-| March 27  | 1 hour           | 1 hour                     | 5 hours      | 1 hour           | 8               | 17.5             |
-| March 28  | 1 hours(review)  | 1 hour                     | 6 hours      | 1.5 hours        | 8.5             | 26               |
-| March 29  | 0                | 1 hour                     | 6 hours      | 1.5 hours        | 8.5             | 34.5             |
-| March 30  | 0                | 1 hour                     | 4 hours      | 4 hours          | 9               | 43.5             |
-| March 31  | 0                | 1 hour                     | 5 hours      | 2 hours          | 8               | 51.5             |
-| April 1   | 0                | 1 hour                     | 4 hours      | 3 hours          | 8               | 59.5             |
-| April 2   |PRESENTATION      | PRES DAY                   | PRES DAY     | PRES DAY         | PRES DAY        | PRES DAY         |
+|          | Studying New Concepts | General(Axios Calls, ect.) | Writing Code | Styling           | Total Hours Day | Total Hours Days |
+| -------- | --------------------- | -------------------------- | ------------ | ----------------- | --------------- | ---------------- |
+| March 26 | 4 hours               | 2 hours                    | 3 hours      | 0.5 hour(initial) | 9.5             | 9.5              |
+| March 27 | 1 hour                | 1 hour                     | 5 hours      | 1 hour            | 8               | 17.5             |
+| March 28 | 1 hours(review)       | 1 hour                     | 6 hours      | 1.5 hours         | 8.5             | 26               |
+| March 29 | 0                     | 1 hour                     | 6 hours      | 1.5 hours         | 8.5             | 34.5             |
+| March 30 | 0                     | 1 hour                     | 4 hours      | 4 hours           | 9               | 43.5             |
+| March 31 | 0                     | 1 hour                     | 5 hours      | 2 hours           | 8               | 51.5             |
+| April 1  | 0                     | 1 hour                     | 4 hours      | 3 hours           | 8               | 59.5             |
+| April 2  | PRESENTATION          | PRES DAY                   | PRES DAY     | PRES DAY          | PRES DAY        | PRES DAY         |
 
-## SWOT 
+## SWOT
 
 ### Strengths:
 
@@ -111,7 +108,7 @@ I have a strong idea of what I want to make conceptually and visually in my mind
 
 ### Weaknesses:
 
-My propensity to be paralyzed with not knowing what to do next, esp after a success in one part of a thing. 
+My propensity to be paralyzed with not knowing what to do next, esp after a success in one part of a thing.
 
 ### Opportunities:
 
@@ -119,10 +116,4 @@ A chance to build a really cool React app! I think if I do this properly, in bot
 
 ### Threats:
 
-Improper time management, and more specifically, not getting as much sleep as I need. I have trouble shutting my brain off at night. 
-
-
-
-
-
-
+Improper time management, and more specifically, not getting as much sleep as I need. I have trouble shutting my brain off at night.
