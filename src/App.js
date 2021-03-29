@@ -3,15 +3,7 @@ import { useEffect, useState } from "react";
 import { Route, Link, useHistory } from "react-router-dom";
 import Header from "./components/Header";
 import Form from "./components/Form";
-import {
-  Box,
-  Button,
-  Heading,
-  Collapsible,
-  Grommet,
-  ResponsiveContext,
-  Layer,
-} from "grommet";
+import {Box,Button,Heading,Collapsible,Grommet,ResponsiveContext,Layer,} from "grommet";
 import { FormClose, Notification } from "grommet-icons";
 import GrommetExample from "./components/GrommetExample";
 
@@ -29,11 +21,11 @@ const theme = {
     focus: {
       outline: {
         color: "violet",
-      }, 
+      },
       // shadow: {
       //   color: "blue"
       // }
-    }
+    },
   },
 };
 
@@ -46,12 +38,7 @@ function App() {
             <Header />
             <Form />
 
-            {/* <Route path="/list">
-            
-
-              
-            </Route> */}
-
+            {/* <Route path="/list" </Route> */}
             {/* <GrommetExample /> */}
           </Box>
         )}
