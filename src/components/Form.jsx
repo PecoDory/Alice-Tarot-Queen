@@ -5,26 +5,17 @@ import { TextInput, Box, Button } from "grommet";
 import { useEffect, useState } from "react";
 import { baseURL, config } from "../services";
 
-
-
-export default function Form({handleAskQuestion}) {
+export default function Form({ handleAskQuestion }) {
   const [value, setValue] = useState("");
-  
-  
-  
 
   return (
-    
-    <Box align="center" justify="center" width="medium">
+    <Box width="medium">
       <TextInput
-        placeholder=""
+        placeholder="What Do You Wish To Know?"
         value={value}
         onChange={(event) => setValue(event.target.value)}
       />
-      <Button onClick={(e) => handleAskQuestion(value)} primary label="label" />
-      
+      <Button onClick={(e) => handleAskQuestion(value)} primary label="Ask" />
     </Box>
-    
   );
-  
 }

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Route, Link, useHistory } from "react-router-dom";
 import Header from "./components/Header";
 import Form from "./components/Form";
+import TarotCard from "./components/TarotCard";
 import {
   Box,
   Button,
@@ -13,16 +14,14 @@ import {
   Layer,
   Image,
 } from "grommet";
-import { FormClose, Notification } from "grommet-icons";
 import GrommetExample from "./components/GrommetExample";
-import { baseURL, config } from "./services";
+import { baseURL, baseURLTWO, config } from "./services";
 import axios from "axios";
 
 const theme = {
   global: {
     colors: {
-      brand: "#328BE6",
-      // border:"purple"
+      brand: "#328BE6"
     },
     font: {
       family: "Roboto",
@@ -31,11 +30,9 @@ const theme = {
     },
     focus: {
       outline: {
-        color: "violet",
+        color: "none",
       },
-      // shadow: {
-      //   color: "blue"
-      // }
+      
     },
   },
 };
@@ -55,29 +52,21 @@ function App() {
     postQuestion(question);
     pickCards();
   };
-  const postQuestion = async (question) => {
-    console.log("post question");
-    console.log(question);
-    //const response = await axios.post
-    //make axios .post call
 
-    //response as new question state
+  const postQuestion = async (question) => {
+    const resp = await axios.post(baseURLTWO, { fields: { question } }, config);
+    console.log(resp);
     setNewQuestion(question);
   };
 
   const pickCards = () => {
-    const cardDeck = cards;
-
-    //get random index
-
-    //remove card from cardDeck at random index
-
-    setPastCard(cards[0]);
-    setPresentCard(cards[1]);
-    setFutureCard(cards[2]);
-    console.log("pick cards");
+    const cardDeck = [...cards];
+    cardDeck.sort((a, b) => Math.random() - 0.5);
+    console.log(cardDeck);
+    setPastCard(cardDeck[0]);
+    setPresentCard(cardDeck[1]);
+    setFutureCard(cardDeck[2]);
   };
-  
 
   async function getCardsData() {
     try {
@@ -88,47 +77,28 @@ function App() {
       console.log(err.message);
     }
   }
-  console.log(pastCard);
-  console.log(presentCard);
+
   return (
     <Grommet theme={theme} full>
       <ResponsiveContext.Consumer>
         {(size) => (
-          <Box fill>
+          <Box align="center" fill>
             <Header />
+
             <Form handleAskQuestion={handleAskQuestion} />
 
             {pastCard && presentCard && futureCard && (
               <Box>
-                {/* if this is true if this is true if this is true stop make box (always in brackets conditional rendering) */}
+                Past, Present, and Future 
                 <Box className="cardGrid" direction="row" gap="medium">
-                  <Box >
-                    <Image
-                      
-                      fit="cover"
-                      src={pastCard.fields.image}
-                      key={pastCard.id}
-                    />
-                  </Box>
-                  <Box >
-                    <Image
-                      fit="cover"
-                      src={presentCard.fields.image}
-                      key={presentCard.id}
-                    />
-                  </Box>
-                  <Box >
-                    <Image
-                      fit="cover"
-                      src={futureCard.fields.image}
-                      key={futureCard.id}
-                    />
-                  </Box>
+                  <TarotCard card={pastCard} />
+                  <TarotCard card={presentCard} />
+                  <TarotCard card={futureCard} />
                 </Box>
               </Box>
             )}
 
-            {/* <Route path="/list" </Route> */}
+            <Route path="/list"> </Route>
             {/* <GrommetExample /> */}
           </Box>
         )}
