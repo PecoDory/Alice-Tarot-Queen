@@ -1,20 +1,14 @@
 // import './App.css';
+import backGround from "./images/red tapestry.jpeg"
 import { useEffect, useState } from "react";
 import { Route, Link, useHistory } from "react-router-dom";
 import Header from "./components/Header";
 import Form from "./components/Form";
-import List from "./components/List"
 import TarotCard from "./components/TarotCard";
 import {
   Box,
-  Button,
-  Heading,
-  Collapsible,
   Grommet,
   ResponsiveContext,
-  Layer,
-  Image,
-  Paragraph, 
 } from "grommet";
 import GrommetExample from "./components/GrommetExample";
 import { cardURL, readingURL, config } from "./services";
@@ -96,7 +90,11 @@ const postQuestion = async (question) => {
 };
   
   return (
-    <Grommet background='violet' theme={theme} full>
+    <Grommet background={{
+      image:
+        `url(http://www.craftme.com/uploads/TPS367B5.jpg)`,
+      opacity: 'strong',
+    }} theme={theme} full>
       <ResponsiveContext.Consumer>
         {(size) => (
           <Box  align="center" fill>
@@ -105,7 +103,7 @@ const postQuestion = async (question) => {
             <Form handleAskQuestion={handleAskQuestion} />
 
               
-              <Box>
+            <Box>
                 <Box align="center">Past, Present, and Future</Box>
                 <Box className="cardGrid" direction="row" gap="medium">
                   <TarotCard card={pastCard} />

@@ -3,14 +3,7 @@ import "./TarotCard.css";
 
 import {
   Box,
-  Button,
-  Heading,
-  Collapsible,
-  Grommet,
-  ResponsiveContext,
-  Layer,
   Image,
-  Text,
   Paragraph,
 } from "grommet";
 

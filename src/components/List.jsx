@@ -1,15 +1,8 @@
 import React from "react";
 import axios from "axios";
-import { cardURL, readingURL, config } from "../services";
+import { readingURL, config } from "../services";
 import {
   Box,
-  Button,
-  Heading,
-  Collapsible,
-  Grommet,
-  ResponsiveContext,
-  Layer,
-  Image,
   Paragraph,
 } from "grommet";
 
