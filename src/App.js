@@ -13,15 +13,16 @@ import {
   ResponsiveContext,
   Layer,
   Image,
+  Paragraph, 
 } from "grommet";
 import GrommetExample from "./components/GrommetExample";
-import { baseURL, baseURLTWO, config } from "./services";
+import { cardURL, readingURL, config } from "./services";
 import axios from "axios";
 
 const theme = {
   global: {
     colors: {
-      brand: "#328BE6"
+      brand: "#328BE6",
     },
     font: {
       family: "Roboto",
@@ -32,7 +33,6 @@ const theme = {
       outline: {
         color: "none",
       },
-      
     },
   },
 };
@@ -43,18 +43,23 @@ function App() {
   let [presentCard, setPresentCard] = useState(null);
   let [futureCard, setFutureCard] = useState(null);
   let [newQuestion, setNewQuestion] = useState(null);
-
+  let [hasCards, setHasCards] = useState(false);
+  let [questions, setQuestions] = useState([])
+    
+    
   useEffect(() => {
-    getCardsData();
+      getCardsData()
+      getQuestions();
   }, []);
 
   const handleAskQuestion = (question) => {
-    postQuestion(question);
     pickCards();
-  };
+    postQuestion(question);
+    };
 
   const postQuestion = async (question) => {
-    const resp = await axios.post(baseURLTWO, { fields: { question } }, config);
+    // const resp = await axios.post(readingURL, { fields: { question, pastCardID: pastCard.id, presentCardID: presentCard.id, futureCardID: futureCard.id } }, config);
+    const resp = await axios.post(readingURL, { fields: { question } }, config);
     console.log(resp);
     setNewQuestion(question);
   };
@@ -66,11 +71,12 @@ function App() {
     setPastCard(cardDeck[0]);
     setPresentCard(cardDeck[1]);
     setFutureCard(cardDeck[2]);
+    setHasCards(true);
   };
 
   async function getCardsData() {
     try {
-      let response = await axios.get(baseURL, config);
+      let response = await axios.get(cardURL, config);
       setCards(response.data.records);
       console.log(response);
     } catch (err) {
@@ -78,25 +84,47 @@ function App() {
     }
   }
 
+  async function getQuestions() {
+  try {
+    let response = await axios.get(readingURL, config);
+    console.log(response)
+    setQuestions(response.data.records);
+
+  } catch (err) {
+    console.log(err.message)
+  }
+}
+
   return (
     <Grommet theme={theme} full>
       <ResponsiveContext.Consumer>
         {(size) => (
-          <Box align="center" fill>
+          <Box  align="center" fill>
             <Header />
+
+
+            <Box align="center">{questions.map((question) =>
+              <Box key={question.id}>
+                <Paragraph>
+                {question.fields.question}
+
+                </Paragraph>
+            </Box>
+            )}</Box>
+
 
             <Form handleAskQuestion={handleAskQuestion} />
 
-            {pastCard && presentCard && futureCard && (
+              
               <Box>
-                Past, Present, and Future 
+                <Box align="center">Past, Present, and Future</Box>
                 <Box className="cardGrid" direction="row" gap="medium">
                   <TarotCard card={pastCard} />
                   <TarotCard card={presentCard} />
                   <TarotCard card={futureCard} />
                 </Box>
               </Box>
-            )}
+              
 
             <Route path="/list"> </Route>
             {/* <GrommetExample /> */}

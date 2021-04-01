@@ -13,11 +13,21 @@ import {
 } from "grommet";
 
 const TarotCard = ({ card }) => {
-  console.log(card.fields.description);
   return (
-    <Box className="card" height="500px" width="280px">
-      <Image fit="contain" src={card.fields.image} />
-      <Paragraph textAlign="center">{card.fields.description}</Paragraph>
+    <Box className="card" align="center"height="500px" width="280px" round="large">
+      <Image
+        className="cardImg"
+        round="small"
+        
+        fit="contain"
+        src={
+          card
+            ? card.fields.image
+            : "https://res.cloudinary.com/pecodory/image/upload/v1617241484/Tarot_Back_tnu8ro.png"
+            
+        }
+      />
+      <Paragraph responsive="true" textAlign="center">{card ? card.fields.description: ""}</Paragraph>
     </Box>
   );
 };

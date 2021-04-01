@@ -1,8 +1,9 @@
 
 
-.card img{ 
- /* height: 250px;
- width: 140px; */
+.cardImg { 
+ height: 250px;
+ width: 140px;
  padding: 2px 2px 2px 2px; 
- border-radius: 15px; 
+ border-radius: 25%; 
+ 
 } 
