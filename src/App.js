@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Route, Link, useHistory } from "react-router-dom";
 import Header from "./components/Header";
 import Form from "./components/Form";
+import List from "./components/List"
 import TarotCard from "./components/TarotCard";
 import {
   Box,
@@ -27,7 +28,7 @@ const theme = {
     font: {
       family: "Roboto",
       size: "18px",
-      height: "20px",
+      // height: "20px",
     },
     focus: {
       outline: {
@@ -56,13 +57,6 @@ function App() {
     pickCards();
     postQuestion(question);
     };
-
-  const postQuestion = async (question) => {
-    // const resp = await axios.post(readingURL, { fields: { question, pastCardID: pastCard.id, presentCardID: presentCard.id, futureCardID: futureCard.id } }, config);
-    const resp = await axios.post(readingURL, { fields: { question } }, config);
-    console.log(resp);
-    setNewQuestion(question);
-  };
 
   const pickCards = () => {
     const cardDeck = [...cards];
@@ -95,24 +89,19 @@ function App() {
   }
 }
 
+const postQuestion = async (question) => {
+  const resp = await axios.post(readingURL, { fields: { question } }, config);
+  console.log(resp);
+  setNewQuestion(question);
+};
+  
   return (
-    <Grommet theme={theme} full>
+    <Grommet background='violet' theme={theme} full>
       <ResponsiveContext.Consumer>
         {(size) => (
           <Box  align="center" fill>
             <Header />
-
-
-            <Box align="center">{questions.map((question) =>
-              <Box key={question.id}>
-                <Paragraph>
-                {question.fields.question}
-
-                </Paragraph>
-            </Box>
-            )}</Box>
-
-
+              
             <Form handleAskQuestion={handleAskQuestion} />
 
               

@@ -1,4 +1,6 @@
 import React from "react";
+import "./TarotCard.css";
+
 import {
   Box,
   Button,
@@ -14,8 +16,9 @@ import {
 
 const TarotCard = ({ card }) => {
   return (
-    <Box className="card" align="center"height="500px" width="280px" round="large">
-      <Image
+    <Box className="card" align="center" justify="start" width="280px" >
+      <Box animation="pulse" className="tarot" flex={{shrink:0}}>
+      <Image 
         className="cardImg"
         round="small"
         
@@ -27,6 +30,7 @@ const TarotCard = ({ card }) => {
             
         }
       />
+      </Box>
       <Paragraph responsive="true" textAlign="center">{card ? card.fields.description: ""}</Paragraph>
     </Box>
   );
