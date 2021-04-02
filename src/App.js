@@ -11,9 +11,8 @@ const theme = {
       
     },
     font: {
-      family: "Roboto",
-      
-      size: "18px",
+      family: "Italianno",
+      size: "34px",
       height: "20px",
     },
     focus: {

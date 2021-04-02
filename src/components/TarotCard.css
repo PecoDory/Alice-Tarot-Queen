@@ -5,8 +5,13 @@
 .cardImg { 
   height: 250px;
   width: 140px;
-  padding: 2px 2px 2px 2px; 
+  /* padding: 2px 2px 2px 2px;  */
   border-radius: 10px; 
-  
- } 
- 
+} 
+
+.description{
+  padding: 4px 4px 4px 4px;
+  font-family: 'Lora', 'Times New Roman', Times, serif;
+  font-size:"10px";
+  color:rgb(39, 12, 58);
+}

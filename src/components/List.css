@@ -5,3 +5,9 @@
 .questions {
   margin-top: 10px;
 }
+
+.list{
+  color: rgb(33, 7, 58);
+  font-family: 'Lora','Times New Roman', Times, serif;
+  font-size:small;
+}

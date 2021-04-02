@@ -7,8 +7,10 @@ const TarotCard = ({ card }) => {
   return (
     <Box className="card" align="center" justify="start" width="280px">
       <Box
+      animation={{type: "pulse", duration: 13000}}>
+      <Box
         className="tarot"
-        animation={{ type: "pulse",type:"fadeIn", duration: 9000 }}
+        animation={{ type: "fadeIn", duration: 11000 }}
         flex={{ shrink: 0 }}
       >
         <Image
@@ -21,10 +23,13 @@ const TarotCard = ({ card }) => {
               : "https://res.cloudinary.com/pecodory/image/upload/v1617241484/Tarot_Back_tnu8ro.png"
           }
         />
+        </Box>
       </Box>
+      <Box className="description">
       <Paragraph responsive="true" textAlign="center">
         {card ? card.fields.description : ""}
       </Paragraph>
+      </Box>
     </Box>
   );
 };

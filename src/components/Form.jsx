@@ -17,14 +17,14 @@ export default function Form({ handleAskQuestion }) {
           onChange={(event) => setValue(event.target.value)}
         />
       </Box>
-      <Box className="button">
-        <Button
+      <Box >
+        <Button className="button"
           color="lavender"
-          size="small"
+          size="large"
           disabled={!value}
           onClick={(e) => handleAskQuestion(value)}
           primary
-          label="Ask"
+          label="into the aether..."
         />
       </Box>
     </Box>
