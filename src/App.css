@@ -1,5 +1,13 @@
+*{
+  text-decoration: none;
+  
+}
+* a{
+  color: black;
+}
 .App {
   text-align: center;
+  color: grey;
 }
 
 

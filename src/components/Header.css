@@ -1,0 +1,12 @@
+.ask{
+  display: flex;
+  margin-top: 20px;
+  padding-right: 250px;
+}
+
+.peer{
+  display: flex;
+  margin-top: -20px;
+  margin-left: 250px;
+}
+

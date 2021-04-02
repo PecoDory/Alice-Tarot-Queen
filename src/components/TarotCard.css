@@ -1,16 +1,12 @@
-/* import {
-  Box,
-  Button,
-  Heading,
-  Collapsible,
-  Grommet,
-  ResponsiveContext,
-  Layer,
-  Image,
-  Text,
-  Paragraph,
-} from "grommet";
+.card{
+  margin-top: 32px;
+}
 
-.tarot{
-  animation="pulse"
-} */
+.cardImg { 
+  height: 250px;
+  width: 140px;
+  padding: 2px 2px 2px 2px; 
+  border-radius: 10px; 
+  
+ } 
+ 
