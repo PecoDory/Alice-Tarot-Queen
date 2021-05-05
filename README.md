@@ -2,7 +2,7 @@
 
 
 # [Netlify](https://alice-tarot-queen.netlify.app/)
-[gent](https://www.youtube.com/watch?v=9vx9a-Nm6to)
+
 
 
 # Alice-Tarot-Queen
